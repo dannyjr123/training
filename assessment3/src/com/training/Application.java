@@ -6,6 +6,8 @@ public class Application {
 	public static void main(String[] args) {
 		Customer customer = new Customer(232, "Dhanush", 2424252525L, "danushgamil.com");
 		
+		//System.out.println(customer.getEmail());
 		System.out.println(customer.getEmail());
+		
 	}
 }
