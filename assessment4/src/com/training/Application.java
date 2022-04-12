@@ -45,16 +45,10 @@ public class Application {
 //		}		
 		
 		Map<Doctor,Set<Patient>> map = new HashMap<Doctor,Set<Patient>>();
-		
+		map.put(doctor2, patients2);
+		map.put(doctor, patients);
 		Appointment appointment= new Appointment(map);
-		System.out.println("Map from here");
-		for(Map.Entry<Doctor, Set<Patient>> eachValue : appointment.getMap().entrySet()) {
-			
-			if(eachValue.getKey().getDoctorId()==900) {
-				
-				System.out.println(eachValue.getValue());
-			}
-		}
 		
+		System.out.println(appointment.getPatients(doctor));		
 	}
 }

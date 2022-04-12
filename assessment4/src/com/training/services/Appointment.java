@@ -51,5 +51,8 @@ public class Appointment {
 		this.map = map;
 	}	
 	
+	public Set<Patient> getPatients(Doctor key){
+		return this.map.get(key);
+	}
 	
 }
