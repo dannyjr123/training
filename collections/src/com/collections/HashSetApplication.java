@@ -13,6 +13,7 @@ public class HashSetApplication {
 		Student harish1 = new Student(007, "harish", 45);
 		
 		Set<Student> set= new HashSet<Student>();
+		
 		set.add(ram);
 		set.add(shazam);
 		set.add(jagan);

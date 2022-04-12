@@ -12,7 +12,8 @@ public class TreeSetApplication {
 		Student harish = new Student(007, "harish", 45);
 		Student harish1 = new Student(007, "harish", 45);
 		
-		Set<Student> set= new TreeSet<>();		
+		Set<Student> set= new TreeSet<>();	
+		
 		set.add(ram);
 		set.add(shazam);
 		set.add(jagan);

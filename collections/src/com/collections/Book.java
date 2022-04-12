@@ -5,7 +5,6 @@ public class Book implements Comparable<Book>{
 	private String bookName;
 	private String authour;
 	private double price;
-	//private static int book;
 	
 	public Book() {
 		super();
@@ -18,12 +17,6 @@ public class Book implements Comparable<Book>{
 		this.bookName = bookName;
 		this.authour = authour;
 		this.price = price;
-	}
-	
-	@Override
-	public String toString() {
-		return "Book [bookNumber=" + bookNumber + ", bookName=" + bookName + ", authour=" + authour + ", price=" + price
-				+ "]";
 	}
 	
 	public int getBookNumber() {
@@ -65,4 +58,10 @@ public class Book implements Comparable<Book>{
 		if(this.bookNumber<obj.bookNumber)return -1;
 		return 0;
 	}	
+	
+	@Override
+	public String toString() {
+		return "Book [bookNumber=" + bookNumber + ", bookName=" + bookName + ", authour=" + authour + ", price=" + price
+				+ "]";
+	}
 }

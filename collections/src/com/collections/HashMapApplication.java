@@ -30,11 +30,10 @@ public class HashMapApplication {
 		System.out.println(map.get(502));
 		System.out.println(map.get(503));
 		
-//		for(Map.Entry<Integer, Student> map1 : map.entrySet()) {
-//			int key=map1.getKey();
-//			Student value=map1.getValue();
-//			System.out.println("Key -> "+key +" value -> "+value);
-//		}
-		
+		for(Map.Entry<Integer, Student> map1 : map.entrySet()) {
+			int key=map1.getKey();
+			Student value=map1.getValue();
+			System.out.println("Key -> "+key +" value -> "+value);
+		}		
 	}
 }
