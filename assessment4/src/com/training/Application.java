@@ -4,9 +4,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
-import javax.print.Doc;
-
 import com.training.model.Doctor;
 import com.training.model.Patient;
 import com.training.services.Appointment;
@@ -35,20 +32,25 @@ public class Application {
 		
 		Doctor doctor= new Doctor(900, "jithin", "Cardiologist", patients);
 		Doctor doctor2= new Doctor(800, "sidharth", "Tumor Funtionalist", patients2);
+		
 		Set<Doctor> doctors = new HashSet<Doctor>();
 		
 		doctors.add(doctor);
-		doctors.add(doctor2);
-		
-//		for(Doctor doc : doctors) {
-//			System.out.println(doc.getPatients()+"\n");			
-//		}		
+		doctors.add(doctor2);		
 		
 		Map<Doctor,Set<Patient>> map = new HashMap<Doctor,Set<Patient>>();
+		
 		map.put(doctor2, patients2);
 		map.put(doctor, patients);
+		
 		Appointment appointment= new Appointment(map);
 		
-		System.out.println(appointment.getPatients(doctor));		
+		System.out.println(appointment.getPatients(doctor));
+		
+//		for(Map.Entry<Doctor, Set<Patient>> map1:appointment.getMap().entrySet()){
+//			if(map1.getKey().equals(doctor)) {
+//				System.out.println(map1.getValue());
+//			}
+//		}
 	}
 }

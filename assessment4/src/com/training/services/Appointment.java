@@ -1,5 +1,6 @@
 package com.training.services;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ public class Appointment {
 	public Appointment() {
 		super();
 		// TODO Auto-generated constructor stub
+		map= new HashMap<>();
 	}
 
 	public Map<Doctor, Set<Patient>> getMap() {
@@ -53,6 +55,5 @@ public class Appointment {
 	
 	public Set<Patient> getPatients(Doctor key){
 		return this.map.get(key);
-	}
-	
+	}	
 }
