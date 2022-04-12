@@ -17,7 +17,7 @@ public class TreeSetApplication {
 		set.add(shazam);
 		set.add(jagan);
 		set.add(harish1);
-		set.add(harish);		
+		set.add(harish);
 		
 		for(Student value : set) {
 			System.out.println(value);
