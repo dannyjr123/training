@@ -5,7 +5,7 @@ public class Book implements Comparable<Book>{
 	private String bookName;
 	private String authour;
 	private double price;
-	private static int book;
+	//private static int book;
 	
 	public Book() {
 		super();
