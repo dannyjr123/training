@@ -12,45 +12,45 @@ public class Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Patient ramesh= new Patient(101, "ramesh", "anna nagar", 1233242422l);
-		Patient gokul= new Patient(102, "gokul", "t.nagar", 53532532532l);
-		Patient magesh = new Patient(103, "magesh", "ECR", 5362636262662l);
-		Patient magesh1 = new Patient(103, "magesh", "ECR", 5362636262662l);
+		Patient ramesh= new Patient(101, "ramesh", "anna nagar", 6433242422l);
+		Patient gokul= new Patient(102, "gokul", "t.nagar", 9153253253l);
+		Patient magesh = new Patient(103, "magesh", "ECR", 7936262662l);
+		Patient magesh1 = new Patient(103, "magesh", "ECR", 9562636262l);
 		Patient dhanush	= new Patient(104, "dhanush", "ayanavaram", 9791015987l);
 		
 		Set<Patient> patients = new HashSet<Patient>();
 		
 		patients.add(ramesh);
-		patients.add(gokul);
+		patients.add(magesh1);
 		patients.add(magesh);
 		
 		
 		Set<Patient> patients2 = new HashSet<>();
 		
-		patients2.add(magesh1);
+		patients2.add(gokul);
 		patients2.add(dhanush);
 		
-		Doctor doctor= new Doctor(900, "jithin", "Cardiologist", patients);
-		Doctor doctor2= new Doctor(800, "sidharth", "Tumor Funtionalist", patients2);
+		Doctor jithin= new Doctor(900, "jithin", "Cardiologist", patients);
+		Doctor sidharth= new Doctor(800, "sidharth", "Tumor Funtionalist", patients2);
 		
 		Set<Doctor> doctors = new HashSet<Doctor>();
 		
-		doctors.add(doctor);
-		doctors.add(doctor2);		
+		doctors.add(jithin);
+		doctors.add(sidharth);
 		
 		Map<Doctor,Set<Patient>> map = new HashMap<Doctor,Set<Patient>>();
 		
-		map.put(doctor2, patients2);
-		map.put(doctor, patients);
+		map.put(jithin, patients);
+		map.put(sidharth, patients2);
 		
 		Appointment appointment= new Appointment(map);
 		
-		System.out.println(appointment.getPatients(doctor));
+		//System.out.println(appointment.getPatients(jithin));
 		
-//		for(Map.Entry<Doctor, Set<Patient>> map1:appointment.getMap().entrySet()){
-//			if(map1.getKey().equals(doctor)) {
-//				System.out.println(map1.getValue());
-//			}
-//		}
+		for(Map.Entry<Doctor, Set<Patient>> map1:appointment.getMap().entrySet()){
+			if(map1.getKey().equals(sidharth)) {
+				System.out.println(map1.getValue());
+			}
+		}
 	}
 }
