@@ -10,4 +10,5 @@ public interface CrudRespository {
 	public List<Book> findAll();
 	//public Book update(Book oldBook, Book newBook);
 	public Book update(Book book);
+	//public List<Book> getBooksGrtThan(double value);
 }

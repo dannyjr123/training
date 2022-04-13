@@ -49,38 +49,43 @@ public class Product implements Comparable<Product>{
 		this.productName = productName;
 		this.ratePerUnit = ratePerUnit;
 	}
+	
 	public int getProductId() {
 		return productId;
 	}
+	
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
+	
 	public String getProductName() {
 		return productName;
 	}
+	
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+	
 	public double getRatePerUnit() {
 		return ratePerUnit;
 	}
+	
 	public void setRatePerUnit(double ratePerUnit) {
 		this.ratePerUnit = ratePerUnit;
 	}
+	
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", ratePerUnit=" + ratePerUnit
 				+ "]";
 	}
+	
 	@Override
 	public int compareTo(Product obj) {
-		
-		 if(this.ratePerUnit>obj.ratePerUnit) return -1;
+		int i=0;
+		 if(this.ratePerUnit>obj.ratePerUnit) i=-1;
 		 
-		 if(this.ratePerUnit<obj.ratePerUnit) return 1;
-		 return 0;
-		 
+		 if(this.ratePerUnit<obj.ratePerUnit) i=1;
+		 return i;		 
 	}
-	
-	
 }

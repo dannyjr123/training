@@ -1,10 +1,9 @@
 package com.training.services;
+import com.training.model.*;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
-import com.training.model.*;
 
 public class Appointment {
 	private Map<Doctor,Set<Patient>> map;
@@ -51,9 +50,9 @@ public class Appointment {
 	public Appointment(Map<Doctor, Set<Patient>> map) {
 		super();
 		this.map = map;
-	}	
+	}
 	
 	public Set<Patient> getPatients(Doctor key){
 		return this.map.get(key);
-	}	
+	}
 }

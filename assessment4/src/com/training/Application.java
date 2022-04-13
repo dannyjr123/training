@@ -9,9 +9,9 @@ import com.training.model.Patient;
 import com.training.services.Appointment;
 
 public class Application {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Patient ramesh= new Patient(101, "ramesh", "anna nagar", 6433242422l);
 		Patient gokul= new Patient(102, "gokul", "t.nagar", 9153253253l);
 		Patient magesh = new Patient(103, "magesh", "ECR", 7936262662l);
@@ -22,8 +22,7 @@ public class Application {
 		
 		patients.add(ramesh);
 		patients.add(magesh1);
-		patients.add(magesh);
-		
+		patients.add(magesh);		
 		
 		Set<Patient> patients2 = new HashSet<>();
 		
@@ -45,12 +44,12 @@ public class Application {
 		
 		Appointment appointment= new Appointment(map);
 		
-		//System.out.println(appointment.getPatients(jithin));
+		System.out.println(appointment.getPatients(jithin));
 		
-		for(Map.Entry<Doctor, Set<Patient>> map1:appointment.getMap().entrySet()){
-			if(map1.getKey().equals(sidharth)) {
-				System.out.println(map1.getValue());
-			}
-		}
+//		for(Map.Entry<Doctor, Set<Patient>> map1:appointment.getMap().entrySet()){
+//			if(map1.getKey().equals(sidharth)) {
+//				System.out.println(map1.getValue());
+//			}
+//		}
 	}
 }

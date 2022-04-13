@@ -1,14 +1,12 @@
 package com.assessment;
 
 import com.training.model1.*;
-
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-
 public class ProductService {
-	private Set<Product> set;
+	private TreeSet<Product> set;
 
 	public ProductService() {
 		super();
@@ -16,7 +14,7 @@ public class ProductService {
 		set=new TreeSet<>();
 	}
 
-	public ProductService(Set<Product> set) {
+	public ProductService(TreeSet<Product> set) {
 		super();
 		this.set = set;
 	}
@@ -25,7 +23,7 @@ public class ProductService {
 		Set<Product> modifiedSet=new TreeSet<Product>();
 	
 		  Iterator<Product> itr= set.iterator();
-		  int i=0;
+		  int i=1;
 		  while(itr.hasNext()) {
 			  
 			  modifiedSet.add(itr.next());
@@ -33,9 +31,7 @@ public class ProductService {
 			  if(i>3) {
 				  break;
 			  }
-		  }  
-		  
-		  
+		  }		  
 		return modifiedSet;
 	}
 	
@@ -51,9 +47,7 @@ public class ProductService {
 			  if(i>n) {
 				  break;
 			  }
-		  }  
-		  
-		  
+		  } 		  
 		return modifiedSet;
 	}
 }

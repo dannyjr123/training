@@ -1,9 +1,13 @@
 package com.training.services;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
 import com.collections.Book;
 import com.training.CrudRespository;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BookService implements CrudRespository{
 	private ArrayList<Book> bookList;	
@@ -65,4 +69,16 @@ public class BookService implements CrudRespository{
 		}
 		return null;
 	}*/
+	
+	public List<Book> getBooksGrtThan(double price){
+		List<Book> list = new ArrayList<Book>();
+		Predicate<Double> grtThan = (value) -> value>price;
+		
+		this.bookList.forEach(book ->{
+			if(grtThan.test(book.getPrice()))
+			list.add(book);
+		});
+		
+		return list;
+	}
 }

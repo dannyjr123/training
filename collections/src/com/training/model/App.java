@@ -57,6 +57,15 @@ public class App {
 		System.out.println("Sorted Names");
 		print(list);
 		
+		List<Book> bookList=((BookService)service).getBooksGrtThan(400);
+		System.out.println("Greater Book comes here");
+		bookList.forEach(System.out::println);
+		
+		String str="string";
+		
+		if(str.equals("sda")) {
+			
+		}
 	}
 	
 	public static void print(List<Book> books) {
